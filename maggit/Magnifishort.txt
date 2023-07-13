@@ -1,0 +1,1062 @@
+{
+    "baseUrl": "https://bu.pooja.learn-wisego.com/Account/Login",
+    
+    "groups": [
+        {
+            "describe": "Magnifi",
+            "tests": [
+                {
+                    "describe": "Loginpage",
+                    
+                    "name": "Login",
+                    "steps": [
+                        {
+                            "name": "Enterusername",
+                            "element": "getByXpath(//input[@id=\"Email\"])",
+                            "actions": [
+                                "fill(poojabuadmin)"
+                            ]
+                        },
+                        {
+                            "name": "Enterpassword",
+                            "element": "getByXpath(//input[@id=\"Password\"])",
+                            "actions": [
+                                "fill(Password#@1234)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonlogin",
+                            "element": "getByXpath(//button[text()=\"Login\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "describe": "Creating a Lesson plan and assigning it to user",
+                    "name": "LessonPlan",
+                    "dependsOn": {
+                        "name": "Login"
+                    },
+                    "steps": [
+                        {
+                            "name": "Expand",
+                            "element": "getByXpath((//a[@id=\"menu-toggle\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonlessonplan1",
+                            "element": "getByXpath(//span[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selectlessonplan2",
+                            "element": "getByXpath(//a[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplanicon1",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Createlessonplan1",
+                            "element": "getByXpath(//a[@id=\"modalRedirect\" and @data-tooltip=\"Create Lesson Plan\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Clickno21",
+                            "element": "getByXpath((//div[@class=\"col-md-3 col-sm-4 modal-btn\"])[3]//*[text()=\"No\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplanname3",
+                            "element": "getByXpath(//input[@id=\"Name\"])",
+                            "actions": [
+                                "fill(Lessonplana81123459)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                       
+                        {
+                            "name": "Description4",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Testing Lesson plan description)"
+                            ]
+                        },
+                        {
+                            "name": "Days3",
+                            "element": "getByXpath(//input[@id=\"DurationDays\"])",
+                            "actions": [
+                                "fill(10)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Saveandnext3",
+                            "element": "getByXpath((//a[text()=\"Training Modules\"])[2])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Saveandnext14",
+                            "element": "getByXpath((//a[text()=\"Training Modules\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "TrainingmoduleIcon1",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "AddnewTrainingmodule1",
+                            "element": "getByXpath(//a[text()=\"TM\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Essaytype",
+                            "element": "getByXpath(//label[text()=\"ESSAY TYPE\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Titlename2",
+                            "element": "getByXpath(//input[@id=\"Title\"])",
+                            "actions": [
+                                "fill(TrainingModulea8_0067899)"
+                            ]
+                        },
+                        {
+                            "name": "Totalscore",
+                            "element": "getByXpath(//input[@name=\"TotalPoints\"])",
+                            "actions": [
+                                "fill(100)"
+                            ]
+                        },
+                        {
+                            "name": "Passingpercentage",
+                            "element": "getByXpath(//input[@name=\"PassingPercentage\"])",
+                            "actions": [
+                                "fill(60)"
+                            ]
+                        },
+                        {
+                            "name": "TMdescription1",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Testing Training module description)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonselectlanguage13",
+                            "element": "getByXpath(//a[text()=\"Save & Next: Set Language\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "UploadResource2",
+                            "element": "getByXpath(//a[text()=\"Upload Resource\"])",
+                            "actions": [
+                                "waitForLoadState",
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "SelectFolder2",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[70])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "PickResource4",
+                            "element": "getByXpath(//a[@id=\"pickResource\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(2000)"
+                            ]
+                        },
+                        {
+                            "name": "Finish3",
+                            "element": "getByXpath(//a[text()=\"Finish\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                       
+
+
+
+                       
+                        {
+                            "name": "TrainingmoduleIcon2",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "AddnewTrainingmodule2",
+                            "element": "getByXpath(//a[text()=\"TM\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Contentwithtest",
+                            "element": "getByXpath(//label[text()=\"CONTENT WITH TEST\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Titlename1",
+                            "element": "getByXpath(//input[@id=\"Title\"])",
+                            "actions": [
+                                "fill(TrainingModulea8_99)"
+                            ]
+                        },
+                        {
+                            "name": "Maxattempts45",
+                            "element": "getByXpath(//input[@name=\"MaximumNoOfAttempts\"])",
+                            "actions": [
+                                "fill(2)"
+                            ]
+                        },
+                        {
+                            "name": "Retaketest56",
+                            "element": "getByXpath(//label[text()=\"Retake even if passed?\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Review",
+                            "element": "getByXpath(//label[text()=\"Time For Review\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Hours",
+                            "element": "getByXpath(//input[@name=\"TimeForReviewHours\"])",
+                            "actions": [
+                                "fill(8)"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Minutes",
+                            "element": "getByXpath(//input[@name=\"TimeForReviewMinutes\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "TMdescription5",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Testing Training module description)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonselectlanguage23",
+                            "element": "getByXpath(//a[text()=\"Save & Next: Set Language\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "SelectLanguage34",
+                            "element":"getByXpath(//select[@name=\"Language\"])",
+                            "actions":["select(English)"]
+                    
+                        },
+                        {
+                            "name": "UploadResource3",
+                            "element": "getByXpath(//a[text()=\"Upload Resource\"])",
+                            "actions": [
+                                "waitForLoadState",
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "SelectFolder3",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[51])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "PickResource566",
+                            "element": "getByXpath(//a[@id=\"pickResource\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(3000)"
+                            ]
+                        },
+                        {
+                            "name": "UploadRsc",
+                            "element": "getByXpath(//a[text()=\"Upload Resources\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(5000)",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Pickfile",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[64])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(3000)"
+                                
+                            ]
+                        },
+                        {
+                            "name": "PickResource5",
+                            "element": "getByXpath(//a[text()=\"Pick Resource\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(3000)"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Finish4",
+                            "element": "getByXpath(//a[text()=\"Finish\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+
+                        {
+                            "name": "Pickmodules91",
+                            "element": "getByXpath(//a[text()=\"Pick Modules\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Assignuser95",
+                            "element": "getByXpath(//a[text()=\" Assign Users\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Assignuserstab95",
+                            "element": "getByXpath(//a[@title=\"Assign Users\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Selectuser91",
+                            "element": "getByXpath(//*[@id=\"active-training-cards\"]/div[1])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "PickUser92",
+                            "element": "getByXpath(//a[@id=\"pickUsers\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Done912",
+                            "element": "getByXpath((//a[text()=\"Finish\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplanassert3",
+                            "element": "getByXpath((//a[@title=\"View / Edit Lesson Plan\"])[1])",
+                            "expectations": [
+                                "toMatch([Lessonplana81123459])"
+                            ]
+                        },
+
+                        {
+                            "name": "Expandarrow",
+                            "element": "getByXpath((//a[@id=\"menu-toggle\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonlessonplanbutton1",
+                            "element": "getByXpath(//span[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selectlessonplanoption2",
+                            "element": "getByXpath(//a[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplaniconbutton1",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Createlessonplanbutton1",
+                            "element": "getByXpath(//a[@id=\"modalRedirect\" and @data-tooltip=\"Create Lesson Plan\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Clicknobutton21",
+                            "element": "getByXpath((//div[@class=\"col-md-3 col-sm-4 modal-btn\"])[3]//*[text()=\"No\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplanname4",
+                            "element": "getByXpath(//input[@id=\"Name\"])",
+                            "actions": [
+                                "fill(Lessonplana8123459)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+
+                        {
+                            "name": "Sequential",
+                            "element": "getByXpath((//label[text()=\"Sequential\"])[2])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                       
+                        {
+                            "name": "Descriptiontext4",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Testing Lesson plan description)"
+                            ]
+                        },
+                        {
+                            "name": "Daysno3",
+                            "element": "getByXpath(//input[@id=\"DurationDays\"])",
+                            "actions": [
+                                "fill(10)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Saveandnextbutton3",
+                            "element": "getByXpath((//a[text()=\"Training Modules\"])[2])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Saveandnextbutton14",
+                            "element": "getByXpath((//a[text()=\"Training Modules\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        
+                       
+                       
+                       
+                        {
+                            "name": "TrainingmoduleIcon5",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "AddnewTrainingmodule4",
+                            "element": "getByXpath(//a[text()=\"TM\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Contentonly",
+                            "element": "getByXpath(//label[text()=\"CONTENT ONLY\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Titlename4",
+                            "element": "getByXpath(//input[@id=\"Title\"])",
+                            "actions": [
+                                "fill(TrainingModuleta8_9922205)"
+                            ]
+                        },
+                        {
+                            "name": "Retaketest23",
+                            "element": "getByXpath(//label[text()=\"Retake even if passed?\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "TMdescription3",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Testing Training module description)",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Clickonselectlanguage41",
+                            "element": "getByXpath(//a[text()=\"Save & Next: Set Language\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "SelectLanguage12",
+                            "element":"getByXpath(//select[@name=\"Language\"])",
+                            "actions":["select(English)"]
+                    
+                        },
+                        {
+                            "name": "UploadResource1",
+                            "element": "getByXpath(//a[text()=\"Upload Resource\"])",
+                            "actions": [
+                                "waitForLoadState",
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "SelectFolder1",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[27])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "PickResource3",
+                            "element": "getByXpath(//a[@id=\"pickResource\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(2000)"
+                            ]
+                        },
+                        {
+                            "name": "Finish2",
+                            "element": "getByXpath(//a[text()=\"Finish\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+
+                        {
+                            "name": "Pickmodules1",
+                            "element": "getByXpath(//a[text()=\"Pick Modules\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Assignuser5",
+                            "element": "getByXpath(//a[text()=\" Assign Users\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Assignuserstab5",
+                            "element": "getByXpath(//a[@title=\"Assign Users\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Selectuser1",
+                            "element": "getByXpath(//*[@id=\"active-training-cards\"]/div[1])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "PickUser2",
+                            "element": "getByXpath(//a[@id=\"pickUsers\"])",
+                            "actions": [
+                                "click",
+                                "waitForTimeout(1000)"
+                            ]
+                        },
+                        {
+                            "name": "Done12",
+                            "element": "getByXpath((//a[text()=\"Finish\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Lessonplanassert4",
+                            "element": "getByXpath((//a[@title=\"View / Edit Lesson Plan\"])[1])",
+                            "expectations": [
+                                "toMatch([Lessonplana8123459])"
+                            ]
+                        },
+                       
+                      
+                       
+                        {
+                            "name": "Expand4",
+                            "element": "getByXpath((//a[@id=\"menu-toggle\"])[2])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Expandlessonplan",
+                            "element": "getByXpath(//span[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selectlessonplan5",
+                            "element": "getByXpath(//a[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Clickoncreateicon",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Quicktrainingicon",
+                            "element": "getByXpath(//a[@href=\"/LessonPlan/Create?lessonPlanType=QuickTraining\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Quicktrainingname",
+                            "element": "getByXpath(//input[@placeholder=\"Quick Training Name\"])",
+                            "actions": [
+                                "fill(Quicktraina80099)"
+                            ]
+                        },
+                        {
+                            "name": "Trainingdescription1",
+                            "element": "getByXpath(//textarea[@placeholder=\"Quick Training Description\"])",
+                            "actions": [
+                                "fill(Testing)"
+                            ]
+                        },
+                        {
+                            "name": "Setdays1",
+                            "element": "getByXpath(//input[@placeholder=\"Set Days\"])",
+                            "actions": [
+                                "fill(10)"
+                            ]
+                        },
+                        {
+                            "name": "Maxattempts12",
+                            "element": "getByXpath(//input[@name=\"MaximumNoOfAttempts\"])",
+                            "actions": [
+                                "fill(4)"
+                            ]
+                        },
+                        {
+                            "name": "Saveandnext9",
+                            "element": "getByXpath(//a[text()=\"Upload Resources\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Selectscormfile",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[103])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Pickresbutton",
+                            "element": "getByXpath(//a[@id=\"pickResource\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Assignuserbutton4",
+                            "element": "getByXpath(//a[text()=\"Assign Users\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Assignusertab4",
+                            "element": "getByXpath(//a[@title=\"Assign Users\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selectuseroption1",
+                            "element": "getByXpath(//*[@id=\"active-training-cards\"]/div[1])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Pickuseroption14",
+                            "element": "getByXpath(//a[@id=\"pickUsers\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Finishbutton2",
+                            "element": "getByXpath(//a[text()=\"Finish\" and @class=\"btn btn-blue  bg-blue \"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Assertquicktrainingname",
+                            "element": "getByXpath((//a[@title=\"View / Edit Lesson Plan\"])[1])",
+                            "expectations": [
+                                "toMatch([Quicktraina80099])"
+                            ]
+                        },
+                        {
+                            "name": "Expand1",
+                            "element": "getByXpath((//a[@id=\"menu-toggle\"])[2])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Clicklessonplan",
+                            "element": "getByXpath(//span[text()=\"Lesson Plans\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selecttrainingmodule",
+                            "element": "getByXpath(//a[text()=\"Training Modules\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Trainingmoduleicon4",
+                            "element": "getByXpath(//span[@class=\"hamburger hamburger-3\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Createtrainingmodule",
+                            "element": "getByXpath(//a[@data-tooltip=\"Create Training Module\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Titlename36",
+                            "element": "getByXpath(//input[@id=\"Title\"])",
+                            "actions": [
+                                "fill(TMtesta812345)"
+                            ]
+                        },
+                        {
+                            "name": "Maxattempts13",
+                            "element": "getByXpath(//input[@name=\"MaximumNoOfAttempts\"])",
+                            "actions": [
+                                "fill(4)"
+                            ]
+                        },
+                        {
+                            "name": "TMdescription2",
+                            "element": "getByXpath(//textarea[@id=\"Description\"])",
+                            "actions": [
+                                "fill(Test)"
+                            ]
+                        },
+                        {
+                            "name": "SetLanguage",
+                            "element": "getByXpath(//a[text()=\"Save & Next: Set Language\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Uploadresource5",
+                            "element": "getByXpath(//a[text()=\"Upload Resource\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Selectfile",
+                            "element": "getByXpath((//div[@class=\"elfinder-cwd-file-wrapper\"])[103])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Pickresource2",
+                            "element": "getByXpath(//a[text()=\"Pick Resource\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Finish12",
+                            "element": "getByXpath(//a[text()=\"Finish\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                      
+                       
+                        {
+                            "name": "Logoutbutton",
+                            "element": "getByXpath(//img[@id=\"user-Profile\"])",
+                            "actions": [
+                                "click"
+                                
+                            ]
+                        },
+                        {
+                            "name": "Logout",
+                            "element": "getByXpath(//p[text()=\"Log Out\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Loginusername",
+                            "element": "getByXpath(//input[@name=\"Email\"])",
+                            "actions": [
+                                "fill(josh1)"
+                            ]
+                        },
+                        {
+                            "name": "Loginpassword",
+                            "element": "getByXpath(//input[@name=\"Password\"])",
+                            "actions": [
+                                "fill(Password@123)"
+                            ]
+                        },
+                        {
+                            "name": "Submit",
+                            "element": "getByXpath(//button[text()=\"Login\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Expand6",
+                            "element": "getByXpath((//a[@id=\"menu-toggle\"])[2])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Selectlessonplan1",
+                            "element": "getByXpath(//span[text()=\"E-Learning\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Clicksearchfield",
+                            "element": "getByXpath((//input[@placeholder=\"Search\"])[3])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Entersearchtext",
+                            "element": "getByXpath((//input[@placeholder=\"Search\"])[3])",
+                            "actions": [
+                                "fill(Lessonplana8123459)",
+                                "waitForLoadState"
+                            ]
+                        },
+
+                        {
+                            "name": "Clickserchbutton",
+                            "element": "getByXpath(//button[@id=\"txtSearchUserLessonPlan\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                       
+                        {
+                            "name": "Opentrainingmodule",
+                            "element": "getByXpath((//span[text()=\"Open\"])[4])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Starttrainingmodule",
+                            "element": "getByXpath((//span[@class=\"status-tag status-blue\" and text()=\"Start\"])[2])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Finishbutton1",
+                            "element": "getByXpath(//a[text()=\"Finish\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Passusername",
+                            "element": "getByXpath(//input[@placeholder=\"Enter your User Name\"])",
+                            "actions": [
+                                "fill(josh1)"
+                            ]
+                        },
+                        {
+                            "name": "Password1",
+                            "element": "getByXpath(//input[@placeholder=\"Enter your Password\"])",
+                            "actions": [
+                                "fill(Password@123)"
+                            ]
+                        },
+                        {
+                            "name": "Confirmcheckbox",
+                            "element": "getByXpath(//p[text()=\"I confirm that I am the user of this account and that I have completed this module. -ok ok ok ok\"])",
+                            "actions": [
+                                "click"
+                            ]
+                        },
+                        {
+                            "name": "Submitbuttton",
+                            "element": "getByXpath(//a[text()=\"Submit\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Completedbutton",
+                            "element": "getByXpath(//a[@id=\"completedList\"])",
+                            "actions": [
+                                "click",
+                                "waitForLoadState"
+                            ]
+                        },
+                        {
+                            "name": "Passassert",
+                            "element": "getByXpath((//span[@class=\"lpName\"])[11])",
+                            "expectations": [
+                                "toMatch([Lessonplana8123459])"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
